@@ -256,7 +256,6 @@ void rr_rivet_on_log_in(char *token, char *avatar_url, char *name,
     rr_api_on_get_password("5d68a8ec6cbf3997a641803260390362d59681bc7524ef3a3fd67afddaba0ba96d1196d30834aa25aa1440cadffb4c87af6495e613c535b793cc1c71aa8c4d04", this);
 }
 */
-
 static struct rr_ui_element *make_label_tooltip(char const *text, float size)
 {
     return rr_ui_set_background(
@@ -403,7 +402,6 @@ void rr_game_init(struct rr_game *this)
     strcpy(this->rivet_account.token, "");
     strcpy(this->rivet_account.code, "");
     strcpy(this->rivet_account.uuid, "");
-    rr_discord_oauth2_init(this);
 
     // clang-format off
     rr_ui_container_add_element(
