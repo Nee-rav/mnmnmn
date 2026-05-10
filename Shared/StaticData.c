@@ -255,7 +255,7 @@ struct rr_mob_rarity_scale RR_MOB_RARITY_SCALING[rr_rarity_id_max] = {
 uint32_t RR_RARITY_COLORS[rr_rarity_id_max] = {
     0xff7eef6d, 0xffffe65d, 0xff4d52e3, 0xff861fde,
     0xffde1f1f, 0xff1fdbde, 0xffff2b75, 0xff2bffa3, 
-    0xff0000af, 0xffffffb0};
+    0xff0000af, 0xffffff9f};
 
 char const *RR_RARITY_NAMES[rr_rarity_id_max] = {
     "Common",    "Unusual", "Rare",   "Epic",
@@ -708,8 +708,8 @@ RR_DEFINE_MAZE(HELL_CREEK, 80) = {
 {A,A,A,A,A,A,A,A,A,_,_,A,A,A,_,e,e,e,e,E,_,_,r,r,R,_,_,U,u,u,u,u,_,_,_,e,e,e,e,e}, // 6
 {A,A,A,A,A,A,A,_,_,_,A,A,A,A,_,_,E,e,e,e,e,_,R,R,R,R,_,_,u,u,_,_,_,e,e,e,e,e,e,e}, // 7
 {a,a,a,a,A,A,_,_,A,A,A,A,A,A,A,_,_,e,e,e,e,_,_,R,R,R,R,_,_,_,_,e,e,e,e,e,e,e,e,e}, // 8
-{a,a,a,a,_,_,_,A,A,A,A,A,A,A,A,A,_,_,R,R,R,R,R,R,R,e,e,e,e,e,e,e,e,_,_,e,e,e,e,e}, // 9
-{a,a,a,a,a,a,a,a,A,A,A,A,A,A,t,t,t,_,_,_,R,R,R,R,R,e,e,e,e,e,e,e,e,e,_,_,e,e,_,e}, // 10
+{a,a,a,a,_,_,_,A,A,A,A,A,A,A,A,A,_,_,R,R,R,R,R,R,R,R,R,e,e,e,e,e,e,_,_,e,e,e,e,e}, // 9
+{a,a,a,a,a,a,a,a,A,A,A,A,A,A,t,t,t,_,_,_,R,R,R,R,R,R,R,e,e,e,e,e,e,e,_,_,e,e,_,e}, // 10
 {a,a,a,a,a,a,a,a,A,A,A,A,A,t,t,t,t,t,t,_,_,_,R,R,R,R,_,e,e,e,e,e,e,e,e,_,_,_,_,e}, // 11
 {a,a,a,a,a,a,a,a,a,_,_,A,A,t,t,t,t,t,t,t,t,_,_,_,_,_,_,e,e,e,e,e,E,E,E,E,E,E,E,E}, // 12
 {a,_,_,_,a,a,a,a,a,a,_,A,t,t,t,t,t,t,t,t,t,t,t,t,t,t,_,_,e,e,e,E,E,E,E,E,E,E,E,E}, // 13
@@ -750,7 +750,7 @@ RR_DEFINE_MAZE(BURROW, 4) = {{1, 1}, {0, 1}};
 struct rr_maze_declaration RR_MAZES[rr_biome_id_max] = {
     {MAZE_ENTRY(HELL_CREEK, 1024), 0, {
         // {-2, -2, 43, 43, 3, 31, 1}, // pvp
-        // {2, 37, 3, 2, 3, 38, 1},   // 0
+        {36, 1, 3, 3, 37, 1, 1},   // 0
         // {14, 33, 3, 5, 14, 34, 20},  // 1
         // {23, 35, 2, 2, 23, 36, 40},  // 2
         // {29, 32, 3, 2, 30, 32, 60},  // 3
