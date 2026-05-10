@@ -165,7 +165,7 @@ static struct zone zone_positions[ZONE_POSITION_COUNT] = {
     {27, 0, 5,  3, fern_tree_zone},
     {15, 5, 6,  4, pter_meteor_zone},
     {30, 27, 7,  4, trice_dako_zone},
-    {37, 4, 3,  2, trex_anky_zone},
+    {35, 5, 5,  2, trex_anky_zone},
     {38, 19, 2,  3, edmo_zone},
     // // {19, 33, 5,  2, tree_zone},
     // // {16, 35, 11, 4, tree_zone},
@@ -181,7 +181,7 @@ static struct zone zone_positions[ZONE_POSITION_COUNT] = {
     {35, 9, 4,  2, quetz_trice_zone},
     {8, 30, 3,  2, pachy_rex_tree_zone},
     {34, 36, 6,  4, pter_fern},
-    {26, 27, 4,  2, trex_dako_pter_zone},
+    {37, 28, 3,  4, trex_dako_pter_zone},
     {0, 29, 2,  4, dako_quetz_zone},
     {1, 0, 4, 2, meteor_pter_anky},
     {12, 15, 3, 3, trice_quetz_fern}

@@ -703,8 +703,8 @@ RR_DEFINE_MAZE(HELL_CREEK, 80) = {
 {A,_,_,A,A,A,A,A,A,A,A,A,A,A,A,A,_,_,_,r,r,r,r,r,U,_,U,u,u,u,u,u,_,C,C,_,c,c,c,c}, // 1
 {A,A,_,_,_,A,A,A,A,A,A,A,A,A,A,_,_,r,r,r,r,r,r,r,U,U,U,_,_,u,u,_,_,C,C,C,c,c,c,c}, // 2
 {A,A,A,A,_,_,_,_,A,A,A,_,A,A,_,_,r,r,r,r,r,r,r,r,U,U,U,U,_,_,_,_,u,C,C,C,c,c,_,_}, // 3
-{A,A,A,A,A,A,A,A,A,A,_,_,A,A,_,r,r,_,_,_,r,r,r,r,U,_,U,U,u,_,u,u,u,C,C,C,_,_,_,e}, // 4
-{A,A,A,A,A,A,A,A,A,A,_,A,A,A,_,e,e,e,e,_,_,r,r,r,_,_,U,U,u,u,u,u,u,C,_,_,_,e,e,e}, // 5
+{A,A,A,A,A,A,A,A,A,A,_,_,A,A,_,r,r,_,_,_,r,r,r,r,U,_,U,U,u,_,u,u,u,C,C,C,_,_,_,_}, // 4
+{A,A,A,A,A,A,A,A,A,A,_,A,A,A,_,e,e,e,e,_,_,r,r,r,_,_,U,U,u,u,u,u,u,C,_,_,_,e,e,_}, // 5
 {A,A,A,A,A,A,A,A,A,_,_,A,A,A,_,e,e,e,e,E,_,_,r,r,R,_,_,U,u,u,u,u,_,_,_,e,e,e,e,e}, // 6
 {A,A,A,A,A,A,A,_,_,_,A,A,A,A,_,_,E,e,e,e,e,_,R,R,R,R,_,_,u,u,_,_,_,e,e,e,e,e,e,e}, // 7
 {a,a,a,a,A,A,_,_,A,A,A,A,A,A,A,_,_,e,e,e,e,_,_,R,R,R,R,_,_,_,_,e,e,e,e,e,e,e,e,e}, // 8
@@ -726,7 +726,7 @@ RR_DEFINE_MAZE(HELL_CREEK, 80) = {
 {X,_,_,a,a,_,_,X,X,X,X,_,s,s,_,s,s,_,_,_,s,s,s,_,_,T,T,_,l,l,l,l,l,l,l,l,l,l,l,l}, // 24
 {X,X,_,_,_,_,X,X,X,X,X,_,s,_,_,s,s,s,s,s,s,_,_,_,s,s,_,_,l,l,l,l,l,l,l,l,l,l,l,l}, // 25
 {X,X,X,X,X,X,X,X,X,X,_,_,s,_,s,s,s,_,_,_,_,_,s,s,s,_,_,l,l,l,l,_,_,_,l,l,l,l,l,l}, // 26
-{X,X,X,X,X,X,X,X,X,X,_,s,s,_,s,_,_,_,s,s,s,s,s,s,s,_,L,L,L,L,_,_,l,l,l,l,l,l,L,L}, // 27
+{X,X,X,X,X,X,X,X,X,X,_,s,s,_,s,_,_,_,s,s,s,s,s,s,s,_,L,L,L,L,_,_,l,l,l,l,l,l,l,l}, // 27
 {X,X,X,X,X,X,X,X,_,X,_,s,s,_,_,_,s,s,s,s,s,s,s,s,_,_,L,L,L,_,_,l,l,l,l,l,l,_,L,L}, // 28
 {X,X,_,_,X,X,X,_,_,X,_,_,s,s,s,s,s,_,_,_,_,_,_,_,_,L,L,L,L,_,l,l,l,l,l,l,_,_,L,L}, // 29
 {X,_,_,x,x,x,x,_,X,X,X,_,s,s,_,_,_,_,M,M,M,M,M,M,_,L,L,L,L,_,_,l,l,l,l,l,_,L,L,L}, // 30
@@ -748,15 +748,16 @@ RR_DEFINE_MAZE(BURROW, 4) = {{1, 1}, {0, 1}};
         &RR_MAZE_##MAZE[0][0]
 
 struct rr_maze_declaration RR_MAZES[rr_biome_id_max] = {
-    {MAZE_ENTRY(HELL_CREEK, 1024), 0, {
+    {MAZE_ENTRY(HELL_CREEK, 1024), 8, {
         // {-2, -2, 43, 43, 3, 31, 1}, // pvp
         {36, 1, 3, 3, 37, 1, 1},   // 0
-        // {14, 33, 3, 5, 14, 34, 20},  // 1
-        // {23, 35, 2, 2, 23, 36, 40},  // 2
-        // {29, 32, 3, 2, 30, 32, 60},  // 3
-        // {35, 28, 3, 2, 36, 29, 80},  // 4
-        // {26, 27, 3, 3, 27, 28, 100},  // 5
-        // {9, 27, 3, 1, 10, 27, 120}, // 6
+        {28, 5, 4, 3, 30, 5, 20},  // 1
+        {21, 3, 4, 2, 22, 4, 40},  // 2
+        {27, 9, 2, 3, 28, 10, 60},  // 3
+        {33, 18, 3, 3, 34, 19, 80},  // 4
+        {27, 25, 13, 3, 28, 26, 100},  // 5
+        {28, 38, 3, 2, 29, 39, 120}, // 6
+        {2, 31, 5, 3, 4, 32, 140}, // 7
     }},
     {MAZE_ENTRY(HELL_CREEK, 1024), 0},
     {MAZE_ENTRY(BURROW, 512), 0},
