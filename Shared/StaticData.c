@@ -703,7 +703,7 @@ RR_DEFINE_MAZE(HELL_CREEK, 80) = {
 {A,_,_,A,A,A,A,A,A,A,A,A,A,A,A,A,_,_,_,r,r,r,r,r,U,_,U,u,u,u,u,u,_,C,C,_,c,c,c,c}, // 1
 {A,A,_,_,_,A,A,A,A,A,A,A,A,A,A,_,_,r,r,r,r,r,r,r,U,U,U,_,_,u,u,_,_,C,C,C,c,c,c,c}, // 2
 {A,A,A,A,_,_,_,_,A,A,A,_,A,A,_,_,r,r,r,r,r,r,r,r,U,U,U,U,_,_,_,_,u,C,C,C,c,c,_,_}, // 3
-{A,A,A,A,A,A,A,A,A,A,_,_,A,A,_,r,r,_,_,_,r,r,r,r,U,_,U,U,u,_,u,u,u,C,C,C,_,_,_,E}, // 4
+{A,A,A,A,A,A,A,A,A,A,_,_,A,A,_,r,r,_,_,_,r,r,r,r,U,_,U,U,u,_,u,u,u,C,C,C,_,_,_,e}, // 4
 {A,A,A,A,A,A,A,A,A,A,_,A,A,A,_,e,e,e,e,_,_,r,r,r,_,_,U,U,u,u,u,u,u,C,_,_,_,e,e,e}, // 5
 {A,A,A,A,A,A,A,A,A,_,_,A,A,A,_,e,e,e,e,E,_,_,r,r,R,_,_,U,u,u,u,u,_,_,_,e,e,e,e,e}, // 6
 {A,A,A,A,A,A,A,_,_,_,A,A,A,A,_,_,E,e,e,e,e,_,R,R,R,R,_,_,u,u,_,_,_,e,e,e,e,e,e,e}, // 7

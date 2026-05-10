@@ -143,22 +143,22 @@ enum rr_petal_id
     rr_petal_id_sand,      // 31
     rr_petal_id_mint,      // 32
     rr_petal_id_dako_egg,  // 33
-    rr_petal_id_pter_egg,  // 33
-    rr_petal_id_fern_egg,  // 34
-    rr_petal_id_tree_egg,  // 35
-    rr_petal_id_anky_egg,  // 36
-    rr_petal_id_trice_egg, // 37
-    rr_petal_id_quetz_egg,    // 38
-    rr_petal_id_edmo_egg,  // 39
-    rr_petal_id_pachy_egg, // 40
-    rr_petal_id_orni_egg, // 41
-    rr_petal_id_obliterator, // 42
-    rr_petal_id_eggOP, // 43
-    rr_petal_id_eggTest, // 44
-    rr_petal_id_permastun, // 45
-    rr_petal_id_superfling, // 46
-    rr_petal_id_permastun_obtainable, // 47
-    rr_petal_id_max,       // 48 
+    rr_petal_id_pter_egg,  // 34
+    rr_petal_id_fern_egg,  // 35
+    rr_petal_id_tree_egg,  // 36
+    rr_petal_id_anky_egg,  // 37
+    rr_petal_id_trice_egg, // 38
+    rr_petal_id_quetz_egg,    // 39
+    rr_petal_id_edmo_egg,  // 40
+    rr_petal_id_pachy_egg, // 41
+    rr_petal_id_orni_egg, // 42
+    rr_petal_id_obliterator, // 43
+    rr_petal_id_eggOP, // 44
+    rr_petal_id_eggTest, // 45
+    rr_petal_id_permastun, // 46
+    rr_petal_id_superfling, // 47
+    rr_petal_id_permastun_obtainable, // 48
+    rr_petal_id_max,       // 49
 };
 
 enum rr_mob_id
