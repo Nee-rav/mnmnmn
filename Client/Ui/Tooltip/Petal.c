@@ -62,14 +62,14 @@ static void get_cooldown(struct rr_ui_element *this, struct rr_game *game)
         if (game->simulation_ready)
         {
             for (uint8_t i = 0; i < game->slots_unlocked; ++i)
-                if (game->player_info->slots[i].id == rr_petal_id_berry)
+                if (game->player_info->slots[i].id == rr_petal_id_faster)
                     reload_speed += 0.02 *
                                     (game->player_info->slots[i].rarity + 1);
         }
         else
         {
             for (uint8_t i = 0; i < game->slots_unlocked; ++i)
-                if (game->cache.loadout[i].id == rr_petal_id_berry)
+                if (game->cache.loadout[i].id == rr_petal_id_faster)
                     reload_speed += 0.02 * (game->cache.loadout[i].rarity + 1);
         }
     }
@@ -142,7 +142,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
 {
     char fmt[16];
     char *hp = malloc((sizeof *hp) * 16);
-    if (id != rr_petal_id_meteor)
+    if (id != rr_petal_id_asteroid)
         rr_sprintf(hp, RR_PETAL_DATA[id].health *
                            RR_PETAL_DATA[id].scale[rarity].health);
     else
@@ -150,7 +150,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                            RR_MOB_RARITY_SCALING[rarity >= 1 ? rarity - 1
                                                              : 0].health);
     char *dmg = malloc((sizeof *dmg) * 16);
-    if (id != rr_petal_id_meteor)
+    if (id != rr_petal_id_asteroid)
         rr_sprintf(dmg, RR_PETAL_DATA[id].damage *
                             RR_PETAL_DATA[id].scale[rarity].damage /
                             RR_PETAL_DATA[id].count[rarity]);
@@ -269,7 +269,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                           rr_ui_text_init(" T-Rex", 12, 0xffffffff), NULL),
                       -1, 0));
     }
-    else if (id == rr_petal_id_dako_egg)
+    else if (id == rr_petal_id_dakoraptor_egg)
     {
         rr_ui_container_add_element(
             this, rr_ui_set_justify(
@@ -281,7 +281,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                               RR_RARITY_COLORS[rarity >= 1 ? rarity - 1 : 0]),
                           rr_ui_text_init(" Dakotaraptor", 12, 0xffffffff), NULL),
                       -1, 0));
-    } else if (id == rr_petal_id_pter_egg)
+    } else if (id == rr_petal_id_pteranodon_egg)
     {
         rr_ui_container_add_element(
             this, rr_ui_set_justify(
@@ -353,7 +353,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                               RR_RARITY_COLORS[rarity >= 1 ? rarity - 1 : 0]),
                           rr_ui_text_init(" Quetzalcoatlus", 12, 0xffffffff), NULL),
                       -1, 0));
-    } else if (id == rr_petal_id_edmo_egg) 
+    } else if (id == rr_petal_id_edmontosaurus_egg) 
     {
         rr_ui_container_add_element(
             this, rr_ui_set_justify(
@@ -414,7 +414,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                           rr_ui_text_init(" Random mob", 12, 0xffffffff), NULL),
                       -1, 0));
     }
-    else if (id == rr_petal_id_berry)
+    else if (id == rr_petal_id_faster)
     {
         char *extra = malloc((sizeof *extra) * 16);
         sprintf(extra, "%.1f rad/s", (0.02 + 0.012 * rarity) * 25);
@@ -471,7 +471,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                           text, NULL),
                       -1, 0));
     }
-    else if (id == rr_petal_id_azalea)
+    else if (id == rr_petal_id_flower)
     {
         char *extra = malloc((sizeof *extra) * 8);
         sprintf(extra, "%s",
@@ -677,7 +677,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                               RR_RARITY_COLORS[rarity]), NULL),
                       -1, 0));
     }
-    else if (id == rr_petal_id_bubble)
+    else if (id == rr_petal_id_bouncer)
     {
         char *extra = malloc((sizeof *extra) * 16);
         sprintf(extra, "%.0f", 25.0f * (rarity + 1));
@@ -689,7 +689,7 @@ struct rr_ui_element *rr_ui_petal_tooltip_init(uint8_t id, uint8_t rarity)
                           rr_ui_text_init(extra, 12, 0xffffffff), NULL),
                       -1, 0));
     }
-    else if (id == rr_petal_id_meteor)
+    else if (id == rr_petal_id_asteroid)
     {
         rr_ui_container_add_element(
             this, rr_ui_set_justify(

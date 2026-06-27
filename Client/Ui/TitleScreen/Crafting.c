@@ -467,7 +467,7 @@ static void crafting_xp_text_animate(struct rr_ui_element *this,
     case rr_rarity_id_epic:
         data->text = "750 xp per craft";
         break;
-    case rr_rarity_id_legendary:
+    case rr_rarity_id_zegendaty:
         data->text = "25k xp per craft";
         break;
     case rr_rarity_id_mythic:

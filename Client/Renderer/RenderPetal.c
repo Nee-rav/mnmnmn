@@ -49,21 +49,21 @@ void rr_component_petal_render(EntityIdx entity, struct rr_game *game,
     if (petal->rarity >= rr_rarity_id_exotic)
     {
         struct rr_particle_manager *particle_manager =
-            petal->id != rr_petal_id_meteor
+            petal->id != rr_petal_id_asteroid
                 ? &game->default_particle_manager
                 : &game->foreground_particle_manager;
         float exotic_coeff = petal->rarity == rr_rarity_id_exotic ? 0.5 : petal->rarity == rr_rarity_id_ultimate ? 1 : petal->rarity == rr_rarity_id_eternal ? 1.5 : 2;
                 float size_coeff =
             physical->on_title_screen ? physical->radius / 20 : 1;
         float colorful_coeff = petal->id == rr_petal_id_fireball ||
-                               petal->id == rr_petal_id_meteor ? 2 : 1;
+                               petal->id == rr_petal_id_asteroid ? 2 : 1;
         float pos_offset = 0;
         if (physical->on_title_screen)
         {
             if (petal->id == rr_petal_id_magnet ||
                 petal->id == rr_petal_id_crest ||
-                petal->id == rr_petal_id_bubble ||
-                petal->id == rr_petal_id_meteor)
+                petal->id == rr_petal_id_bouncer ||
+                petal->id == rr_petal_id_asteroid)
                 pos_offset = physical->radius * rr_frand();
         }
         struct rr_simulation_animation *particle =
@@ -101,7 +101,7 @@ void rr_component_petal_render(EntityIdx entity, struct rr_game *game,
                 break;
             }
         }
-        else if (petal->id == rr_petal_id_meteor)
+        else if (petal->id == rr_petal_id_asteroid)
             particle->color = 0xffab3423;
     }
     if (game->cache.tint_petals)

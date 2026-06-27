@@ -301,7 +301,7 @@ static void system_flower_petal_movement_logic(
             }
             break;
         }
-        case rr_petal_id_azalea:
+        case rr_petal_id_flower:
         {
             struct rr_component_health *flower_health =
                 rr_simulation_get_health(simulation, player_info->flower_id);
@@ -520,7 +520,7 @@ static void system_flower_petal_movement_logic(
             }
             break;
         }
-        case rr_petal_id_bubble:
+        case rr_petal_id_bouncer:
         {
             if ((player_info->input & 2) == 0)
                 break;
@@ -591,7 +591,7 @@ static void system_flower_petal_movement_logic(
                              curr_angle);
         rr_vector_add(&chase_vector, &clump_vector);
     }
-    if (petal->id == rr_petal_id_berry)
+    if (petal->id == rr_petal_id_faster)
     {
         struct rr_vector random_vector;
         rr_vector_from_polar(&random_vector, 10.0f, rr_frand() * M_PI * 2);
@@ -653,7 +653,7 @@ static void petal_modifiers(struct rr_simulation *simulation,
                 heal = max_heal;
             health->gradually_healed += heal;
         }
-        else if (data->id == rr_petal_id_berry)
+        else if (data->id == rr_petal_id_faster)
         {
             to_rotate += (0.02 + 0.012 * slot->rarity);
             player_info->modifiers.reload_speed += 0.02 * (slot->rarity + 1);
@@ -729,11 +729,11 @@ system_egg_hatching_logic(struct rr_simulation *simulation,
     {
         m_id = rr_mob_id_trex;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
-    } else if (petal->id == rr_petal_id_dako_egg)
+    } else if (petal->id == rr_petal_id_dakoraptor_egg)
     {
         m_id = rr_mob_id_dakotaraptor;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
-    } else if (petal->id == rr_petal_id_pter_egg)
+    } else if (petal->id == rr_petal_id_pteranodon_egg)
     {
         m_id = rr_mob_id_pteranodon;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
@@ -758,7 +758,7 @@ system_egg_hatching_logic(struct rr_simulation *simulation,
     {
         m_id = rr_mob_id_quetzalcoatlus;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
-    }else if (petal->id == rr_petal_id_edmo_egg)
+    }else if (petal->id == rr_petal_id_edmontosaurus_egg)
     {
         m_id = rr_mob_id_edmontosaurus;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
@@ -781,7 +781,7 @@ system_egg_hatching_logic(struct rr_simulation *simulation,
         m_id = mobs[rand() % 12];
         m_rar = petal->rarity >= 0 ? petal->rarity - 1 : 0;
     }
-    else if (petal->id == rr_petal_id_meteor)
+    else if (petal->id == rr_petal_id_asteroid)
     {
         m_id = rr_mob_id_meteor;
         m_rar = petal->rarity >= 1 ? petal->rarity - 1 : 0;
@@ -943,7 +943,7 @@ static void rr_system_petal_reload_foreach_function(EntityIdx id,
             }
             if (p_petal->entity_hash == RR_NULL_ENTITY)
             {
-                if (slot->id == rr_petal_id_bubble && has_bubble)
+                if (slot->id == rr_petal_id_bouncer && has_bubble)
                 {
                     p_petal->cooldown_ticks = data->cooldown;
                     if (--clump_count == 0)
@@ -967,11 +967,11 @@ static void rr_system_petal_reload_foreach_function(EntityIdx id,
                                                 p_petal->entity_hash);
                     petal->slot = slot;
                     petal->p_petal = p_petal;
-                    if (data->id == rr_petal_id_meteor)
+                    if (data->id == rr_petal_id_asteroid)
                         system_egg_hatching_logic(simulation, player_info,
                                                   p_petal);
                 }
-                if (data->id == rr_petal_id_meteor)
+                if (data->id == rr_petal_id_asteroid)
                 {
                     if (--clump_count == 0)
                         --rotation_pos;
@@ -987,21 +987,21 @@ static void rr_system_petal_reload_foreach_function(EntityIdx id,
                     min_hp = hp;
                 if (rr_simulation_get_physical(simulation, p_petal->entity_hash)
                         ->arena != player_info->arena ||
-                    (slot->id == rr_petal_id_bubble && has_bubble))
+                    (slot->id == rr_petal_id_bouncer && has_bubble))
                 {
                     rr_simulation_request_entity_deletion(simulation,
                                                           p_petal->entity_hash);
                     continue;
                 }
                 if (data->id == rr_petal_id_egg || 
-                    data->id == rr_petal_id_dako_egg || 
-                    data->id == rr_petal_id_pter_egg ||
+                    data->id == rr_petal_id_dakoraptor_egg || 
+                    data->id == rr_petal_id_pteranodon_egg ||
                     data->id == rr_petal_id_fern_egg ||
                     data->id == rr_petal_id_tree_egg ||
                     data->id == rr_petal_id_anky_egg ||
                     data->id == rr_petal_id_trice_egg ||
                     data->id == rr_petal_id_quetz_egg ||
-                    data->id == rr_petal_id_edmo_egg ||
+                    data->id == rr_petal_id_edmontosaurus_egg ||
                     data->id == rr_petal_id_pachy_egg ||
                     data->id == rr_petal_id_orni_egg || 
                     data->id == rr_petal_id_eggOP ||
