@@ -60,7 +60,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_fill(renderer);
             rr_renderer_stroke(renderer);
             break;
-        case rr_petal_id_pellet:
+        case rr_petal_id_light:
             rr_renderer_set_stroke(renderer, 0xffcfcfcf);
             rr_renderer_set_fill(renderer, 0xffffffff);
             rr_renderer_set_line_width(renderer, 3.0f);
@@ -450,7 +450,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_fill(renderer);
             rr_renderer_stroke(renderer);
             break;
-        case rr_petal_id_dako_egg:
+        case rr_petal_id_dakoraptor_egg:
             rr_renderer_set_stroke(renderer, 0xff65727c);
             rr_renderer_set_fill(renderer,   0xff85929c);
             rr_renderer_set_line_width(renderer, 3);
@@ -459,7 +459,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_fill(renderer);
             rr_renderer_stroke(renderer);
             break;
-        case rr_petal_id_pter_egg:
+        case rr_petal_id_pteranodon_egg:
             rr_renderer_set_stroke(renderer, 0xff8d7148);
             rr_renderer_set_fill(renderer,   0xffad9168);
             rr_renderer_set_line_width(renderer, 3);
@@ -513,7 +513,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_fill(renderer);
             rr_renderer_stroke(renderer);
             break;
-        case rr_petal_id_edmo_egg:
+        case rr_petal_id_edmontosaurus_egg:
             rr_renderer_set_stroke(renderer, 0xff35583a);
             rr_renderer_set_fill(renderer,   0xff55785a);
             rr_renderer_set_line_width(renderer, 3);
@@ -771,7 +771,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_fill(renderer);
             rr_renderer_scale(renderer, 1 / 0.1);
             break;
-        case rr_petal_id_azalea:
+        case rr_petal_id_flower:
             rr_renderer_set_fill(renderer, 0xfff686bd);
             rr_renderer_set_stroke(renderer, 0xffc46b97);
             rr_renderer_set_line_cap(renderer, 1);
@@ -2006,7 +2006,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_bezier_curve_to(renderer, 265.99, 318.79, 312.40, 322.99, 312.40, 322.99);
             rr_renderer_stroke(renderer);
             break;
-        case rr_petal_id_bubble:
+        case rr_petal_id_bouncer:
             rr_renderer_scale(renderer, 12.0f / 928.0f);
             rr_renderer_translate(renderer, -1028, -1028);
             rr_renderer_set_fill(renderer, 0x80bce3ea);
@@ -2025,7 +2025,7 @@ void rr_renderer_draw_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_ellipse(renderer, 0, 0, 187, 314);
             rr_renderer_fill(renderer);
             break;
-        case rr_petal_id_meteor:
+        case rr_petal_id_asteroid:
             rr_renderer_scale(renderer, 0.2f);
             rr_meteor_draw(renderer);
             break;
@@ -2607,7 +2607,7 @@ void rr_renderer_draw_static_petal(struct rr_renderer *renderer, uint8_t id,
             rr_renderer_rotate(renderer, 1.0f);
         else if (id == rr_petal_id_fireball)
             rr_renderer_rotate(renderer, -1.0f + M_PI);
-        else if (id == rr_petal_id_meteor)
+        else if (id == rr_petal_id_asteroid)
             rr_renderer_rotate(renderer, -M_PI / 4);
         else if (id == rr_petal_id_mandible)
             rr_renderer_rotate(renderer, -1.0f);
