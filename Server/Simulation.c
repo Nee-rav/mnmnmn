@@ -1,4 +1,4 @@
-[// Copyright (C) 2024 Paul Johnson
+// Copyright (C) 2024 Paul Johnson
 // Copyright (C) 2024-2025 Maxim Nesterov
 
 // This program is free software: you can redistribute it and/or modify
