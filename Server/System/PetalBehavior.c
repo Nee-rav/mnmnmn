@@ -1032,7 +1032,7 @@ static void rr_system_petal_reload_foreach_function(EntityIdx id,
                     rotation_pos - 1, outer, inner, data);
             }
         }
-        if (slot->id == rr_petal_id_bubble)
+        if (slot->id == rr_petal_id_bouncer)
             has_bubble = 1;
         rr_component_player_info_set_slot_cd(player_info, outer, max_cd);
         rr_component_player_info_set_slot_hp(player_info, outer, min_hp);
