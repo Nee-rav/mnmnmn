@@ -97,7 +97,7 @@ enum rr_rarity_id
     rr_rarity_id_unusual,
     rr_rarity_id_rare,
     rr_rarity_id_epic,
-    rr_rarity_id_legendary,
+    rr_rarity_id_zegendaty,
     rr_rarity_id_mythic,
     rr_rarity_id_exotic,
     rr_rarity_id_ultimate,
@@ -110,10 +110,10 @@ enum rr_petal_id
 {
     rr_petal_id_none,      // 0
     rr_petal_id_basic,     // 1
-    rr_petal_id_pellet,    // 2
+    rr_petal_id_light,    // 2
     rr_petal_id_fossil,    // 3
     rr_petal_id_stinger,   // 4
-    rr_petal_id_berry,     // 5
+    rr_petal_id_faster,     // 5
     rr_petal_id_shell,     // 6
     rr_petal_id_peas,      // 7
     rr_petal_id_leaf,      // 8
@@ -121,7 +121,7 @@ enum rr_petal_id
     rr_petal_id_magnet,    // 10
     rr_petal_id_uranium,   // 11
     rr_petal_id_feather,   // 12
-    rr_petal_id_azalea,    // 13
+    rr_petal_id_flower,    // 13
     rr_petal_id_bone,      // 14
     rr_petal_id_web,       // 15
     rr_petal_id_seed,      // 16
@@ -135,21 +135,21 @@ enum rr_petal_id
     rr_petal_id_nest,      // 24
     rr_petal_id_fireball,  // 25
     rr_petal_id_meat,      // 26
-    rr_petal_id_bubble,    // 27
-    rr_petal_id_meteor,    // 28
+    rr_petal_id_bouncer,    // 27
+    rr_petal_id_asteroid,    // 28
 
     rr_petal_id_mandible,  // 29
     rr_petal_id_wax,       // 30
     rr_petal_id_sand,      // 31
     rr_petal_id_mint,      // 32
-    rr_petal_id_dako_egg,  // 33
-    rr_petal_id_pter_egg,  // 34
+    rr_petal_id_dakoraptor_egg,  // 33
+    rr_petal_id_pteranodon_egg,  // 34
     rr_petal_id_fern_egg,  // 35
     rr_petal_id_tree_egg,  // 36
     rr_petal_id_anky_egg,  // 37
     rr_petal_id_trice_egg, // 38
     rr_petal_id_quetz_egg,    // 39
-    rr_petal_id_edmo_egg,  // 40
+    rr_petal_id_edmontosaurus_egg,  // 40
     rr_petal_id_pachy_egg, // 41
     rr_petal_id_orni_egg, // 42
     rr_petal_id_obliterator, // 43
